@@ -2,11 +2,16 @@
 ```
 npx create-react-app . --use-npm
 ```
+- course is taught with this version:
+```
+npm install react@17.0.2 react-dom@17.0.2
+```
+ - to downgrade react version, follow this [StackOverflow article](https://stackoverflow.com/questions/46566830/how-to-use-create-react-app-with-an-older-react-version)
 
 ### Prettier:
 - run:
 ```
-npm install -D prettier@2.5.1. -D
+npm install -D prettier@2.5.1
 ```
 
 - update `package.json` with:
@@ -98,3 +103,9 @@ npm install -D parcel@2.2.1
 "dev": "parcel src/index.html"
 ```
 
+- add the following to the `package.json` file as well:
+```
+"browserslist": [
+    "last 2 Chrome versions"
+]
+```

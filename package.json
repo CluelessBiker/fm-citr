@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
   },
   "eslintConfig": {
     "extends": [
@@ -30,9 +31,12 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
+      "last 2 chrome versions",
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
   }
 }
