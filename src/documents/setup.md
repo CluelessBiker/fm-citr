@@ -37,13 +37,24 @@ npm run format
 - run:
 ```
 npm install -D eslint@8.8.0 eslint-config-prettier@8.3.0
+npm install -D eslint-plugin-import@2.25.4 eslint-plugin-jsx-a11y@6.5.1 eslint-plugin-react@7.28.0
 ```
 
 - inside root drictory, create the file `.eslintrc.json` & populate it :
 ```
 {
-    "extends": ["eslint:recommended", "prettier"],
-    "plugins": [],
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
+        "prettier"
+    ],
+    "rules": {
+        "react/prop-types": 0,
+        "react/react-in-jsx-scope": 0
+    },
+    "plugins": ["react", "import", "jsx-a11y"],
     "parserOptions": {
         "ecmaVersion": 2022,
         "sourceType": "module",
@@ -55,6 +66,11 @@ npm install -D eslint@8.8.0 eslint-config-prettier@8.3.0
         "es6": true,
         "browser": true,
         "node": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }
 ```
